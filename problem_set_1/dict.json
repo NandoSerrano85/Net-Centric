@@ -1,11 +1,11 @@
 {
     "host":"application programs such as a Web browser program, a Web server program, an e-mail client program, or an e-mail server program",
-    "end system":"synonymous with host, application programs such as a Web browser program, a Web server program, an e-mail client program, or an e-mail server program",
-    "communication links":"",
-    "packet switches":"",
-    "transmission rate":"",
-    "packet":"",
-    "router":"",
-    "link-layer switch":"",
-    "route":""
+    "end_system":"synonymous with host, application programs such as a Web browser program, a Web server program, an e-mail client program, or an e-mail server program",
+    "communication_links":"helps to connect networks together, which are made up of different types of physical media, including coaxial cable, copper wire, optical fiber, and radio spectrum",
+    "packet_switches":"takes a packet arriving on one of its incoming communication links and forwards that packet on one of its outgoing communication links.",
+    "transmission_rate":"different links can transmit data at different rates, measured of a link measured in bits/second",
+    "packet":"the grouping of segments of data packaged together",
+    "router":"typically used in the network core, forwards packets to its destination",
+    "link-layer_switch":"usually used in access network, transmits packets to the end of its packet_switches",
+    "route":"the sequence of communication links and packet switches traversed by a packet from the sending end system to the receiving end system"
 }
