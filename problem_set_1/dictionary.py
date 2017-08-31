@@ -9,24 +9,38 @@ def confirm():
     elif re.search('n', cont):
         return True
     else:
-        print "Please enter 'yes' or 'no' || y or n"
+        print("Please enter 'yes' or 'no' || y or n")
         confirm()
 
 def user_input(key, value):
     accuracy = 0
-    answer = raw_input("What is the definition for ''{}'': ".format(key))
+    answer = raw_input("What is the definition for '{}': ".format(key))
     value = value.split(' ')
-    print value
+    print(type(value[0]))
     answer = answer.split(' ')
-    print answer
-    for n in range(0, len(value)-1):
-        if n < len(answer):
-            if re.search(value[n], answer[n]) :
-                accuracy = accuracy + 1
-            else:
-                pass
+    print(answer)
+    if len(value) <= len(answer):
+        print("inside if")
+        for n in range(0, len(value)-1):
+            for k in range(0, len(answer)-1):
+                print(re.search(value[n], answer[k]))
+                if re.search(value[n], answer[k]):
+                    accuracy = accuracy + 1
+                    n = n + 1
+                else:
+                    pass
+    else:
+        print("inside else")
+        for n in range(0, len(answer)-1):
+            for k in range(0, len(value)-1):
+                print(re.search(value[n], answer[k]))
+                if re.search(value[k], answer[n]):
+                    accuracy = accuracy + 1
+                    n = n + 1
+                else:
+                    pass
     print accuracy
-    accuracy = (abs(accuracy - (len(value)-1)) / (len(value)-1)) * 100
+    accuracy = 100 - ((abs(accuracy - (len(value)-1)) / (len(value)-1)) * 100)
     print accuracy
 
 def main():
